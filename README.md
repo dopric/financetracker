@@ -50,6 +50,7 @@
 
 ### Technologiestack
 - **Backend:** Node.js mit Express oder Python mit Flask/Django oder C# mit Asp.Net Core
+- **Frontend:** Django, Blazor, Angular, React oder Vue
 - **Datenbank:** MongoDB (NoSQL) oder PostgreSQL (SQL) im Docker
 - **Authentifizierung:** JWT (JSON Web Tokens)
 - **Bereitstellung:** Heroku, AWS oder ein anderer Cloud-Anbieter
