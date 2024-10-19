@@ -1,18 +1,19 @@
 ﻿services:
-  financetrackernet.security:
-    image: financetrackernet.security
-    build:
-      context: .
-      dockerfile: FinanceTrackerNet.Security/Dockerfile
-      
+
   mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: mssql
-    ports:
-      - "1433:1433"
-    environment:
-      - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=root123$
-    volumes:
-      - ./data:/var/opt/mssql
+    container_name: sql-server
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    #image: mcr.microsoft.com/mssql/server:2017-CU11-ubuntu
     restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "root$123"
+    ports:
+      - 1433:1433
+    volumes:
+      - my-volume:/var/opt/mssql
+      
+volumes:
+  my-volume:
+
+  
